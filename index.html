@@ -1,117 +1,473 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ansh | My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+<title>Ansh College Portal</title>
 
-        body {
-            background: #000;
-            color: white;
-        }
+<style>
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: #000;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
 
-        nav h1 {
-            font-size: 28px;
-            color: #00ff88;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+body{
+    background:#06182b;
+    color:white;
+    text-align:center;
+}
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 30px;
-        }
+/* HEADER */
 
-        .hero h2 {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#041323;
+    padding:18px 10px;
+    border-bottom:1px solid #073a5e;
+}
 
-        .hero h2 span {
-            color: #00ff88;
-        }
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#08c8ff;
+    text-shadow:0 0 15px #00bfff;
+}
 
-        .hero p {
-            font-size: 20px;
-            color: #aaa;
-            max-width: 600px;
-            line-height: 1.6;
-        }
+nav{
+    margin-top:12px;
+}
 
-        .button {
-            margin-top: 30px;
-            padding: 14px 28px;
-            background: #00ff88;
-            color: #000;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 8px;
+    font-size:14px;
+}
 
-        .about {
-            padding: 80px 10%;
-            text-align: center;
-            background: #111;
-        }
+nav a:hover{
+    color:#00c8ff;
+}
 
-        .about h2 {
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
+/* HERO */
 
-        .about p {
-            color: #aaa;
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.7;
-            font-size: 18px;
-        }
+.hero{
+    padding:70px 20px 55px;
+}
 
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #000;
-            color: #777;
-        }
+.hero h1{
+    font-size:42px;
+    color:#08c8ff;
+    text-shadow:
+        0 0 8px #00bfff,
+        0 0 25px #00bfff;
+}
 
-        @media (max-width: 600px) {
-            .hero h2 {
-                font-size: 40px;
-            }
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    color:#e8f7ff;
+}
 
-            nav {
-                padding: 20px;
-            }
-        }
-    </style>
+.hero .btn{
+    margin-top:25px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:60px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.section-title{
+    font-size:35px;
+    color:#08c8ff;
+    text-shadow:
+        0 0 8px #00bfff,
+        0 0 25px #00bfff;
+    margin-bottom:18px;
+}
+
+.description{
+    font-size:17px;
+    margin-bottom:30px;
+    color:#f1f1f1;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+    background:#08bdf2;
+    color:#001522;
+    padding:18px 35px;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:bold;
+
+    box-shadow:
+        0 0 8px #00c8ff,
+        0 0 25px #00aeea;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 40px #00aeea;
+}
+
+/* CARDS */
+
+.card-container{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:22px;
+    margin-top:30px;
+}
+
+.card{
+    padding:28px 20px;
+    border:1px solid #b9d9e8;
+    border-radius:15px;
+
+    background:#071d32;
+
+    box-shadow:
+        0 0 10px rgba(0,190,255,0.15);
+}
+
+.card h3{
+    font-size:24px;
+    color:white;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#d7e7ef;
+    line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:40px;
+    padding:30px 15px;
+    background:#041323;
+    color:#8fa9b8;
+    border-top:1px solid #073a5e;
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .section-title{
+        font-size:32px;
+    }
+
+    nav a{
+        font-size:12px;
+        margin:0 4px;
+    }
+
+    .btn{
+        font-size:18px;
+        padding:16px 28px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">ANSH COLLEGE</div>
+
     <nav>
-        <h1>ANSH</h1>
+        <a href="#home">Home</a>
+        <a href="#syllabus">Syllabus</a>
+        <a href="#timetable">Timetable</a>
+        <a href="#notes">Notes</a>
+        <a href="#lab">Lab</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+    <h1>Welcome to Ansh College Portal</h1>
+
+    <p>
+        Your college resources in one place.
+    </p>
+
+</section>
+
+
+<!-- SYLLABUS -->
+
+<section id="syllabus">
+
+    <h2 class="section-title">Syllabus</h2>
+
+    <p class="description">
+        Click below to open syllabus section.
+    </p>
+
+    <a class="btn" href="#subjects">
+        📘 Get Syllabus
+    </a>
+
+</section>
+
+
+<!-- TIMETABLE -->
+
+<section id="timetable">
+
+    <h2 class="section-title">Timetable</h2>
+
+    <p class="description">
+        Check your college class timetable.
+    </p>
+
+    <a class="btn" href="#schedule">
+        📅 Get Timetable
+    </a>
+
+</section>
+
+
+<!-- NOTES -->
+
+<section id="notes">
+
+    <h2 class="section-title">Notes</h2>
+
+    <p class="description">
+        Access your subject notes and study material.
+    </p>
+
+    <a class="btn" href="#study-notes">
+        📒 Get Notes
+    </a>
+
+</section>
+
+
+<!-- LAB -->
+
+<section id="lab">
+
+    <h2 class="section-title">Lab</h2>
+
+    <p class="description">
+        Lab details and practical work.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <h3>🧪 DS Lab</h3>
+
+            <p>
+                Data Structure and Data Science
+                lab experiments and practical work.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>💻 Programming Lab</h3>
+
+            <p>
+                C, C++ and Python programming
+                practicals and experiments.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🌐 Web Development Lab</h3>
+
+            <p>
+                HTML, CSS and JavaScript
+                practical projects.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📊 Data Science Lab</h3>
+
+            <p>
+                Data analysis, Python and
+                visualization practicals.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section id="subjects">
+
+    <h2 class="section-title">Subjects</h2>
+
+    <p class="description">
+        Your current college subjects.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>📐 Mathematics</h3>
+            <p>Mathematics syllabus and study material.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Programming</h3>
+            <p>C / C++ programming concepts and practicals.</p>
+        </div>
+
+        <div class="card">
+            <h3>🐍 Python</h3>
+            <p>Python programming and data science basics.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Data Science</h3>
+            <p>Introduction to data science and analysis.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SCHEDULE -->
+
+<section id="schedule">
+
+    <h2 class="section-title">Class Timetable</h2>
+
+    <p class="description">
+        Sample weekly timetable.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Monday</h3>
+            <p>Mathematics • Programming • Physics</p>
+        </div>
+
+        <div class="card">
+            <h3>Tuesday</h3>
+            <p>Python • Data Science • Mathematics</p>
+        </div>
+
+        <div class="card">
+            <h3>Wednesday</h3>
+            <p>Programming Lab • Physics • English</p>
+        </div>
+
+        <div class="card">
+            <h3>Thursday</h3>
+            <p>Data Science • Python • Mathematics</p>
+        </div>
+
+        <div class="card">
+            <h3>Friday</h3>
+            <p>Web Development • Programming Lab</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STUDY NOTES -->
+
+<section id="study-notes">
+
+    <h2 class="section-title">Study Notes</h2>
+
+    <p class="description">
+        Important study resources.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>📘 Mathematics Notes</h3>
+            <p>Unit-wise mathematics study material.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Programming Notes</h3>
+            <p>C++ and programming fundamentals.</p>
+        </div>
+
+        <div class="card">
+            <h3>🐍 Python Notes</h3>
+            <p>Python basics and programming concepts.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Data Science Notes</h3>
+            <p>Data science concepts and practical topics.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>© 2026 Ansh College Portal</p>
+
+    <p>Made with HTML & CSS 💙</p>
+
+</footer>
+
+</body>
+</html>  
