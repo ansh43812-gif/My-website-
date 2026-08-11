@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title> welcome to hello student</title>
+<title>Hello Student Portal</title>
 
 <style>
 
@@ -80,6 +80,22 @@ nav a:hover{
 
 .hero .btn{
     margin-top:25px;
+}
+
+/* PROFILE PHOTO */
+
+.profile-photo{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-top:35px;
+    border:6px solid #08c8ff;
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 35px #00bfff,
+        0 0 60px #008cff;
 }
 
 /* SECTIONS */
@@ -210,6 +226,7 @@ section{
     border:none;
     font-size:18px;
     cursor:pointer;
+    border-radius:5px;
 }
 
 .suggestion-box button:hover{
@@ -276,6 +293,11 @@ footer{
         padding:16px 28px;
     }
 
+    .profile-photo{
+        width:260px;
+        height:260px;
+    }
+
     .suggestion-box{
         padding:30px 15px;
     }
@@ -299,7 +321,7 @@ footer{
 
 <header>
 
-    <div class="logo">B.TECH CSE DATA SCIENCE</div>
+    <div class="logo">HELLO STUDENT</div>
 
     <nav>
         <a href="#home">Home</a>
@@ -316,11 +338,16 @@ footer{
 
 <section class="hero" id="home">
 
-    <h1>ANSH SINGH</h1>
+    <h1>Welcome to Hello Student</h1>
 
     <p>
         Your college resources in one place.
     </p>
+
+    <!-- PROFILE PHOTO -->
+    <img src="photo.jpg"
+         alt="Hello Student"
+         class="profile-photo">
 
 </section>
 
@@ -439,22 +466,34 @@ footer{
 
         <div class="card">
             <h3>📐 Mathematics</h3>
-            <p>Mathematics syllabus and study material.</p>
+            <p>
+                Mathematics syllabus and
+                study material.
+            </p>
         </div>
 
         <div class="card">
             <h3>💻 Programming</h3>
-            <p>C / C++ programming concepts and practicals.</p>
+            <p>
+                C / C++ programming concepts
+                and practicals.
+            </p>
         </div>
 
         <div class="card">
             <h3>🐍 Python</h3>
-            <p>Python programming and data science basics.</p>
+            <p>
+                Python programming and
+                data science basics.
+            </p>
         </div>
 
         <div class="card">
             <h3>📊 Data Science</h3>
-            <p>Introduction to data science and analysis.</p>
+            <p>
+                Introduction to data science
+                and analysis.
+            </p>
         </div>
 
     </div>
@@ -476,27 +515,37 @@ footer{
 
         <div class="card">
             <h3>Monday</h3>
-            <p>Mathematics • Programming • Physics</p>
+            <p>
+                Mathematics • Programming • Physics
+            </p>
         </div>
 
         <div class="card">
             <h3>Tuesday</h3>
-            <p>Python • Data Science • Mathematics</p>
+            <p>
+                Python • Data Science • Mathematics
+            </p>
         </div>
 
         <div class="card">
             <h3>Wednesday</h3>
-            <p>Programming Lab • Physics • English</p>
+            <p>
+                Programming Lab • Physics • English
+            </p>
         </div>
 
         <div class="card">
             <h3>Thursday</h3>
-            <p>Data Science • Python • Mathematics</p>
+            <p>
+                Data Science • Python • Mathematics
+            </p>
         </div>
 
         <div class="card">
             <h3>Friday</h3>
-            <p>Web Development • Programming Lab</p>
+            <p>
+                Web Development • Programming Lab
+            </p>
         </div>
 
     </div>
@@ -518,22 +567,30 @@ footer{
 
         <div class="card">
             <h3>📘 Mathematics Notes</h3>
-            <p>Unit-wise mathematics study material.</p>
+            <p>
+                Unit-wise mathematics study material.
+            </p>
         </div>
 
         <div class="card">
             <h3>💻 Programming Notes</h3>
-            <p>C++ and programming fundamentals.</p>
+            <p>
+                C++ and programming fundamentals.
+            </p>
         </div>
 
         <div class="card">
             <h3>🐍 Python Notes</h3>
-            <p>Python basics and programming concepts.</p>
+            <p>
+                Python basics and programming concepts.
+            </p>
         </div>
 
         <div class="card">
             <h3>📊 Data Science Notes</h3>
-            <p>Data science concepts and practical topics.</p>
+            <p>
+                Data science concepts and practical topics.
+            </p>
         </div>
 
     </div>
@@ -550,13 +607,24 @@ footer{
     <div class="suggestion-box">
 
         <label>Name:</label>
-        <input type="text" placeholder="Your Name">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+        >
 
         <label>Email:</label>
-        <input type="email" placeholder="Your Email">
+
+        <input
+            type="email"
+            placeholder="Your Email"
+        >
 
         <label>Your Suggestion:</label>
-        <textarea placeholder="Type your suggestion here..."></textarea>
+
+        <textarea
+            placeholder="Type your suggestion here..."
+        ></textarea>
 
         <button type="button">
             Send
@@ -573,29 +641,44 @@ footer{
 
     <div class="contact-icons">
 
-        <a class="contact-item"
-           href="https://wa.me/919838736511"
-           target="_blank">
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact-item"
+            href="https://wa.me/919838736511"
+            target="_blank"
+        >
 
             <div class="contact-icon">🟢</div>
+
             <p>WhatsApp</p>
 
         </a>
 
 
-        <a class="contact-item"
-           href="tel:9838736511">
+        <!-- PHONE -->
+
+        <a
+            class="contact-item"
+            href="tel:9838736511"
+        >
 
             <div class="contact-icon">📞</div>
+
             <p>Phone</p>
 
         </a>
 
 
-        <a class="contact-item"
-           href="mailto:">
+        <!-- EMAIL -->
+
+        <a
+            class="contact-item"
+            href="mailto:"
+        >
 
             <div class="contact-icon">✉️</div>
+
             <p>Email</p>
 
         </a>
