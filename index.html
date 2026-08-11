@@ -1,10 +1,10 @@
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ansh College Portal</title>
+<title>Hello Student Portal</title>
 
 <style>
 
@@ -163,14 +163,95 @@ section{
     line-height:1.6;
 }
 
-/* FOOTER */
+/* SUGGESTION BOX */
+
+.suggestion-section{
+    padding:60px 20px;
+    max-width:800px;
+    margin:auto;
+}
+
+.suggestion-box{
+    max-width:570px;
+    margin:35px auto 0;
+    padding:35px 25px;
+    border-radius:20px;
+    background:#14294d;
+
+    box-shadow:
+        0 0 15px rgba(0,190,255,0.35);
+}
+
+.suggestion-box label{
+    display:block;
+    font-size:20px;
+    margin:15px 0 6px;
+}
+
+.suggestion-box input,
+.suggestion-box textarea{
+    width:85%;
+    padding:10px;
+    font-size:17px;
+    border-radius:3px;
+    border:1px solid #aaa;
+}
+
+.suggestion-box textarea{
+    height:110px;
+    resize:vertical;
+}
+
+.suggestion-box button{
+    margin-top:30px;
+    padding:15px 32px;
+    background:green;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.suggestion-box button:hover{
+    background:#00a000;
+}
+
+/* CONTACT FOOTER */
 
 footer{
     margin-top:40px;
-    padding:30px 15px;
+    padding:35px 15px;
     background:#041323;
-    color:#8fa9b8;
+    color:white;
     border-top:1px solid #073a5e;
+}
+
+.contact-icons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.contact-item{
+    color:white;
+    text-decoration:none;
+}
+
+.contact-icon{
+    font-size:48px;
+}
+
+.contact-item p{
+    margin-top:5px;
+    font-size:17px;
+}
+
+.copyright{
+    font-size:18px;
+    margin-top:15px;
 }
 
 /* MOBILE */
@@ -194,6 +275,19 @@ footer{
         font-size:18px;
         padding:16px 28px;
     }
+
+    .suggestion-box{
+        padding:30px 15px;
+    }
+
+    .suggestion-box input,
+    .suggestion-box textarea{
+        width:90%;
+    }
+
+    .contact-icons{
+        gap:25px;
+    }
 }
 
 </style>
@@ -205,7 +299,7 @@ footer{
 
 <header>
 
-    <div class="logo">ANSH COLLEGE</div>
+    <div class="logo">HELLO STUDENT</div>
 
     <nav>
         <a href="#home">Home</a>
@@ -222,7 +316,7 @@ footer{
 
 <section class="hero" id="home">
 
-    <h1>Welcome to Ansh College Portal</h1>
+    <h1>Welcome to Hello Student</h1>
 
     <p>
         Your college resources in one place.
@@ -295,47 +389,35 @@ footer{
     <div class="card-container">
 
         <div class="card">
-
             <h3>🧪 DS Lab</h3>
-
             <p>
                 Data Structure and Data Science
                 lab experiments and practical work.
             </p>
-
         </div>
 
         <div class="card">
-
             <h3>💻 Programming Lab</h3>
-
             <p>
                 C, C++ and Python programming
                 practicals and experiments.
             </p>
-
         </div>
 
         <div class="card">
-
             <h3>🌐 Web Development Lab</h3>
-
             <p>
                 HTML, CSS and JavaScript
                 practical projects.
             </p>
-
         </div>
 
         <div class="card">
-
             <h3>📊 Data Science Lab</h3>
-
             <p>
                 Data analysis, Python and
                 visualization practicals.
             </p>
-
         </div>
 
     </div>
@@ -459,15 +541,74 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+<!-- SUGGESTION BOX -->
+
+<section class="suggestion-section">
+
+    <h2 class="section-title">Suggestion Box</h2>
+
+    <div class="suggestion-box">
+
+        <label>Name:</label>
+        <input type="text" placeholder="Your Name">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Your Email">
+
+        <label>Your Suggestion:</label>
+        <textarea placeholder="Type your suggestion here..."></textarea>
+
+        <button type="button">
+            Send
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT FOOTER -->
 
 <footer>
 
-    <p>© 2026 Ansh College Portal</p>
+    <div class="contact-icons">
 
-    <p>Made with HTML & CSS 💙</p>
+        <a class="contact-item"
+           href="https://wa.me/919838736511"
+           target="_blank">
+
+            <div class="contact-icon">🟢</div>
+            <p>WhatsApp</p>
+
+        </a>
+
+
+        <a class="contact-item"
+           href="tel:9838736511">
+
+            <div class="contact-icon">📞</div>
+            <p>Phone</p>
+
+        </a>
+
+
+        <a class="contact-item"
+           href="mailto:">
+
+            <div class="contact-icon">✉️</div>
+            <p>Email</p>
+
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026-27 Hello Student | All Rights Reserved
+    </p>
 
 </footer>
 
+
 </body>
-</html>  
+</html>
