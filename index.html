@@ -78,10 +78,6 @@ nav a:hover{
     color:#e8f7ff;
 }
 
-.hero .btn{
-    margin-top:25px;
-}
-
 /* PROFILE PHOTO */
 
 .profile-photo{
@@ -170,13 +166,66 @@ section{
 
 .card h3{
     font-size:24px;
-    color: yellow;
+    color:white;
     margin-bottom:12px;
 }
 
 .card p{
     color:#d7e7ef;
     line-height:1.6;
+}
+
+/* MY LAB LOGO */
+
+.lab-title{
+    display:inline-flex;
+    align-items:center;
+    gap:15px;
+
+    font-size:42px;
+    font-weight:bold;
+    color:#08c8ff;
+    letter-spacing:3px;
+
+    padding:15px 30px;
+
+    border:2px solid #08c8ff;
+    border-radius:20px;
+
+    text-shadow:
+        0 0 8px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #008cff;
+
+    box-shadow:
+        0 0 10px #00c8ff,
+        0 0 25px rgba(0,200,255,0.5),
+        inset 0 0 15px rgba(0,200,255,0.15);
+
+    animation: labGlow 2s infinite alternate;
+}
+
+.lab-icon{
+    font-size:45px;
+    filter:drop-shadow(0 0 10px #00c8ff);
+}
+
+@keyframes labGlow{
+
+    from{
+        box-shadow:
+            0 0 10px #00c8ff,
+            0 0 20px rgba(0,200,255,0.4),
+            inset 0 0 10px rgba(0,200,255,0.1);
+    }
+
+    to{
+        box-shadow:
+            0 0 20px #00c8ff,
+            0 0 45px rgba(0,200,255,0.7),
+            inset 0 0 20px rgba(0,200,255,0.2);
+    }
+
 }
 
 /* SUGGESTION BOX */
@@ -298,6 +347,15 @@ footer{
         height:260px;
     }
 
+    .lab-title{
+        font-size:32px;
+        padding:12px 22px;
+    }
+
+    .lab-icon{
+        font-size:36px;
+    }
+
     .suggestion-box{
         padding:30px 15px;
     }
@@ -310,6 +368,7 @@ footer{
     .contact-icons{
         gap:25px;
     }
+
 }
 
 </style>
@@ -338,13 +397,12 @@ footer{
 
 <section class="hero" id="home">
 
-    <h1>ANSH SINGH</h1>
+    <h1>Welcome to Hello Student</h1>
 
     <p>
         Your college resources in one place.
     </p>
 
-    <!-- PROFILE PHOTO -->
     <img src="photo.jpg"
          alt="Hello Student"
          class="profile-photo">
@@ -407,9 +465,12 @@ footer{
 
 <section id="lab">
 
-    <h2 class="section-title">Lab</h2>
+    <div class="lab-title">
+        <span class="lab-icon">🧪</span>
+        <span>MY LAB</span>
+    </div>
 
-    <p class="description">
+    <p class="description" style="margin-top:20px;">
         Lab details and practical work.
     </p>
 
@@ -466,34 +527,22 @@ footer{
 
         <div class="card">
             <h3>📐 Mathematics</h3>
-            <p>
-                Mathematics syllabus and
-                study material.
-            </p>
+            <p>Mathematics syllabus and study material.</p>
         </div>
 
         <div class="card">
             <h3>💻 Programming</h3>
-            <p>
-                C / C++ programming concepts
-                and practicals.
-            </p>
+            <p>C / C++ programming concepts and practicals.</p>
         </div>
 
         <div class="card">
             <h3>🐍 Python</h3>
-            <p>
-                Python programming and
-                data science basics.
-            </p>
+            <p>Python programming and data science basics.</p>
         </div>
 
         <div class="card">
             <h3>📊 Data Science</h3>
-            <p>
-                Introduction to data science
-                and analysis.
-            </p>
+            <p>Introduction to data science and analysis.</p>
         </div>
 
     </div>
@@ -515,37 +564,27 @@ footer{
 
         <div class="card">
             <h3>Monday</h3>
-            <p>
-                Mathematics • Programming • Physics
-            </p>
+            <p>Mathematics • Programming • Physics</p>
         </div>
 
         <div class="card">
             <h3>Tuesday</h3>
-            <p>
-                Python • Data Science • Mathematics
-            </p>
+            <p>Python • Data Science • Mathematics</p>
         </div>
 
         <div class="card">
             <h3>Wednesday</h3>
-            <p>
-                Programming Lab • Physics • English
-            </p>
+            <p>Programming Lab • Physics • English</p>
         </div>
 
         <div class="card">
             <h3>Thursday</h3>
-            <p>
-                Data Science • Python • Mathematics
-            </p>
+            <p>Data Science • Python • Mathematics</p>
         </div>
 
         <div class="card">
             <h3>Friday</h3>
-            <p>
-                Web Development • Programming Lab
-            </p>
+            <p>Web Development • Programming Lab</p>
         </div>
 
     </div>
@@ -567,30 +606,22 @@ footer{
 
         <div class="card">
             <h3>📘 Mathematics Notes</h3>
-            <p>
-                Unit-wise mathematics study material.
-            </p>
+            <p>Unit-wise mathematics study material.</p>
         </div>
 
         <div class="card">
             <h3>💻 Programming Notes</h3>
-            <p>
-                C++ and programming fundamentals.
-            </p>
+            <p>C++ and programming fundamentals.</p>
         </div>
 
         <div class="card">
             <h3>🐍 Python Notes</h3>
-            <p>
-                Python basics and programming concepts.
-            </p>
+            <p>Python basics and programming concepts.</p>
         </div>
 
         <div class="card">
             <h3>📊 Data Science Notes</h3>
-            <p>
-                Data science concepts and practical topics.
-            </p>
+            <p>Data science concepts and practical topics.</p>
         </div>
 
     </div>
@@ -607,24 +638,13 @@ footer{
     <div class="suggestion-box">
 
         <label>Name:</label>
-
-        <input
-            type="text"
-            placeholder="Your Name"
-        >
+        <input type="text" placeholder="Your Name">
 
         <label>Email:</label>
-
-        <input
-            type="email"
-            placeholder="Your Email"
-        >
+        <input type="email" placeholder="Your Email">
 
         <label>Your Suggestion:</label>
-
-        <textarea
-            placeholder="Type your suggestion here..."
-        ></textarea>
+        <textarea placeholder="Type your suggestion here..."></textarea>
 
         <button type="button">
             Send
@@ -641,53 +661,35 @@ footer{
 
     <div class="contact-icons">
 
-        <!-- WHATSAPP -->
-
-        <a
-            class="contact-item"
-            href="https://wa.me/919838736511"
-            target="_blank"
-        >
+        <a class="contact-item"
+           href="https://wa.me/919838736511"
+           target="_blank">
 
             <div class="contact-icon">🟢</div>
-
             <p>WhatsApp</p>
 
         </a>
 
-
-        <!-- PHONE -->
-
-        <a
-            class="contact-item"
-            href="tel:9838736511"
-        >
+        <a class="contact-item"
+           href="tel:9838736511">
 
             <div class="contact-icon">📞</div>
-
             <p>Phone</p>
 
         </a>
 
-
-        <!-- EMAIL -->
-
-        <a
-            class="contact-item"
-            href="mailto:"
-        >
+        <a class="contact-item"
+           href="mailto:">
 
             <div class="contact-icon">✉️</div>
-
             <p>Email</p>
 
         </a>
 
     </div>
 
-
     <p class="copyright">
-        © 2026-27 ANSH SINGH | All Rights Reserved
+        © 2026-27 Hello Student | All Rights Reserved
     </p>
 
 </footer>
