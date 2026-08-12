@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Hello Student Portal</title>
+
+<!-- EMAILJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <style>
 
@@ -68,8 +72,8 @@ nav a:hover{
     font-size:42px;
     color:#08c8ff;
     text-shadow:
-    0 0 8px #00bfff,
-    0 0 25px #00bfff;
+        0 0 8px #00bfff,
+        0 0 25px #00bfff;
 }
 
 .hero p{
@@ -86,16 +90,15 @@ nav a:hover{
     object-fit:cover;
     border-radius:50%;
     margin-top:35px;
-
     border:6px solid #08c8ff;
 
     box-shadow:
-    0 0 15px #00c8ff,
-    0 0 35px #00bfff,
-    0 0 60px #008cff;
+        0 0 15px #00c8ff,
+        0 0 35px #00bfff,
+        0 0 60px #008cff;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
     padding:60px 20px;
@@ -103,63 +106,69 @@ section{
     margin:auto;
 }
 
-/* GLOWING TITLE */
+/* GLOWING LOGOS */
 
 .section-logo{
+
     display:inline-flex;
     align-items:center;
     justify-content:center;
+
     gap:15px;
 
     font-size:40px;
     font-weight:bold;
 
     color:#08c8ff;
+
     letter-spacing:2px;
 
     padding:15px 30px;
 
     border:2px solid #08c8ff;
+
     border-radius:20px;
 
     text-shadow:
-    0 0 8px #00bfff,
-    0 0 20px #00bfff,
-    0 0 40px #008cff;
+        0 0 8px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #008cff;
 
     box-shadow:
-    0 0 10px #00c8ff,
-    0 0 25px rgba(0,200,255,0.5),
-    inset 0 0 15px rgba(0,200,255,0.15);
+        0 0 10px #00c8ff,
+        0 0 25px rgba(0,200,255,0.5),
+        inset 0 0 15px rgba(0,200,255,0.15);
 
-    animation:glow 2s infinite alternate;
+    animation:sectionGlow 2s infinite alternate;
 }
 
 .section-icon{
     font-size:42px;
+    filter:drop-shadow(0 0 10px #00c8ff);
 }
 
-@keyframes glow{
+@keyframes sectionGlow{
 
     from{
         box-shadow:
-        0 0 10px #00c8ff,
-        0 0 20px rgba(0,200,255,0.4);
+            0 0 10px #00c8ff,
+            0 0 20px rgba(0,200,255,0.4),
+            inset 0 0 10px rgba(0,200,255,0.1);
     }
 
     to{
         box-shadow:
-        0 0 20px #00c8ff,
-        0 0 45px rgba(0,200,255,0.7);
+            0 0 20px #00c8ff,
+            0 0 45px rgba(0,200,255,0.7),
+            inset 0 0 20px rgba(0,200,255,0.2);
     }
 
 }
 
 .description{
+    font-size:17px;
     margin-top:22px;
     margin-bottom:30px;
-
-    font-size:17px;
     color:#f1f1f1;
 }
 
@@ -169,6 +178,7 @@ section{
     display:inline-block;
 
     background:#08bdf2;
+
     color:#001522;
 
     padding:18px 35px;
@@ -178,17 +188,22 @@ section{
     text-decoration:none;
 
     font-size:20px;
+
     font-weight:bold;
 
     box-shadow:
-    0 0 8px #00c8ff,
-    0 0 25px #00aeea;
+        0 0 8px #00c8ff,
+        0 0 25px #00aeea;
 
     transition:0.3s;
 }
 
 .btn:hover{
     transform:scale(1.05);
+
+    box-shadow:
+        0 0 15px #00c8ff,
+        0 0 40px #00aeea;
 }
 
 /* CARDS */
@@ -197,7 +212,6 @@ section{
     display:grid;
     grid-template-columns:1fr;
     gap:22px;
-
     margin-top:30px;
 }
 
@@ -205,12 +219,13 @@ section{
     padding:28px 20px;
 
     border:1px solid #b9d9e8;
+
     border-radius:15px;
 
     background:#071d32;
 
     box-shadow:
-    0 0 10px rgba(0,190,255,0.15);
+        0 0 10px rgba(0,190,255,0.15);
 
     transition:0.3s;
 }
@@ -219,12 +234,13 @@ section{
     transform:translateY(-5px);
 
     box-shadow:
-    0 0 15px #00c8ff,
-    0 0 30px rgba(0,190,255,0.3);
+        0 0 15px #00c8ff,
+        0 0 30px rgba(0,190,255,0.3);
 }
 
 .card h3{
     font-size:24px;
+    color:white;
     margin-bottom:12px;
 }
 
@@ -233,9 +249,10 @@ section{
     line-height:1.6;
 }
 
-/* SUGGESTION */
+/* SUGGESTION BOX */
 
 .suggestion-box{
+
     max-width:570px;
 
     margin:35px auto 0;
@@ -247,10 +264,11 @@ section{
     background:#14294d;
 
     box-shadow:
-    0 0 15px rgba(0,190,255,0.35);
+        0 0 15px rgba(0,190,255,0.35);
 }
 
 .suggestion-box label{
+
     display:block;
 
     font-size:20px;
@@ -260,23 +278,37 @@ section{
 
 .suggestion-box input,
 .suggestion-box textarea{
+
     width:85%;
 
-    padding:10px;
+    padding:12px;
 
     font-size:17px;
 
     border-radius:6px;
 
     border:1px solid #aaa;
+
+    outline:none;
+}
+
+.suggestion-box input:focus,
+.suggestion-box textarea:focus{
+
+    border-color:#08c8ff;
+
+    box-shadow:0 0 10px #00c8ff;
 }
 
 .suggestion-box textarea{
+
     height:110px;
+
     resize:vertical;
 }
 
 .suggestion-box button{
+
     margin-top:30px;
 
     padding:15px 32px;
@@ -291,25 +323,40 @@ section{
 
     cursor:pointer;
 
-    border-radius:5px;
+    border-radius:7px;
+
+    transition:0.3s;
+}
+
+.suggestion-box button:hover{
+
+    background:#00a000;
+
+    transform:scale(1.05);
 }
 
 /* FOOTER */
 
 footer{
+
     margin-top:40px;
 
     padding:35px 15px;
 
     background:#041323;
 
+    color:white;
+
     border-top:1px solid #073a5e;
 }
 
 .contact-icons{
+
     display:flex;
 
     justify-content:center;
+
+    align-items:center;
 
     gap:35px;
 
@@ -319,20 +366,29 @@ footer{
 }
 
 .contact-item{
+
     color:white;
+
     text-decoration:none;
 }
 
 .contact-icon{
+
     font-size:48px;
 }
 
 .contact-item p{
+
     margin-top:5px;
+
+    font-size:17px;
 }
 
 .copyright{
+
     font-size:18px;
+
+    margin-top:15px;
 }
 
 /* MOBILE */
@@ -354,12 +410,26 @@ footer{
     }
 
     .section-logo{
-        font-size:28px;
-        padding:12px 18px;
+        font-size:29px;
+        padding:12px 20px;
+        gap:10px;
     }
 
     .section-icon{
         font-size:32px;
+    }
+
+    .suggestion-box{
+        padding:30px 15px;
+    }
+
+    .suggestion-box input,
+    .suggestion-box textarea{
+        width:90%;
+    }
+
+    .contact-icons{
+        gap:25px;
     }
 
 }
@@ -369,18 +439,26 @@ footer{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
     <div class="logo">
-        B.TECH DS
+        HELLO STUDENT
     </div>
 
     <nav>
+
         <a href="#home">Home</a>
+
         <a href="#syllabus">Syllabus</a>
+
         <a href="#timetable">Timetable</a>
+
         <a href="#notes">Notes</a>
+
         <a href="#lab">Lab</a>
+
     </nav>
 
 </header>
@@ -391,15 +469,17 @@ footer{
 <section class="hero" id="home">
 
     <h1>
-        ANSH SINGH
+        Welcome to Hello Student
     </h1>
 
     <p>
         Your college resources in one place.
     </p>
 
+    <!-- YOUR PHOTO -->
+
     <img
-        src="photo.png"
+        src="photo.jpg"
         alt="Student Photo"
         class="profile-photo"
     >
@@ -423,7 +503,7 @@ footer{
         Check your current semester subjects and syllabus.
     </p>
 
-    <a href="#subjects" class="btn">
+    <a class="btn" href="#subjects">
         📚 Get Syllabus
     </a>
 
@@ -446,7 +526,7 @@ footer{
         Check your college class timetable.
     </p>
 
-    <a href="#schedule" class="btn">
+    <a class="btn" href="#schedule">
         🕐 Get Timetable
     </a>
 
@@ -469,7 +549,7 @@ footer{
         Access your subject notes and study material.
     </p>
 
-    <a href="#study-notes" class="btn">
+    <a class="btn" href="#study-notes">
         📚 Get Notes
     </a>
 
@@ -495,35 +575,47 @@ footer{
     <div class="card-container">
 
         <div class="card">
+
             <h3>🧪 DS Lab</h3>
+
             <p>
                 Data Structure and Data Science
                 lab experiments and practical work.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>💻 Programming Lab</h3>
+
             <p>
                 C, C++ and Python programming
                 practicals and experiments.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>🌐 Web Development Lab</h3>
+
             <p>
                 HTML, CSS and JavaScript
                 practical projects.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>📊 Data Science Lab</h3>
+
             <p>
                 Data analysis, Python and
                 visualization practicals.
             </p>
+
         </div>
 
     </div>
@@ -550,40 +642,58 @@ footer{
     <div class="card-container">
 
         <div class="card">
+
             <h3>📘 DSTL</h3>
+
             <p>
-                Discrete Structures and Technical Logic.
+                Discrete Structures and
+                Technical Logic.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>📊 DS</h3>
+
             <p>
-                Data Structures and algorithms.
+                Data Structures and
+                algorithms.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>⚡ DE</h3>
+
             <p>
                 Digital Electronics concepts
                 and practical topics.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>🧠 UHV</h3>
+
             <p>
                 Universal Human Values and
                 professional ethics.
             </p>
+
         </div>
 
         <div class="card">
+
             <h3>💻 COA</h3>
+
             <p>
-                Computer Organization and Architecture.
+                Computer Organization and
+                Architecture.
             </p>
+
         </div>
 
     </div>
@@ -610,28 +720,53 @@ footer{
     <div class="card-container">
 
         <div class="card">
+
             <h3>Monday</h3>
-            <p>DSTL • DS • DE</p>
+
+            <p>
+                DSTL • DS • DE
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>Tuesday</h3>
-            <p>UHV • COA • DS</p>
+
+            <p>
+                UHV • COA • DS
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>Wednesday</h3>
-            <p>DS Lab • DE • DSTL</p>
+
+            <p>
+                DS Lab • DE • DSTL
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>Thursday</h3>
-            <p>COA • DS • UHV</p>
+
+            <p>
+                COA • DS • UHV
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>Friday</h3>
-            <p>Web Lab • COA • DE</p>
+
+            <p>
+                Web Lab • COA • DE
+            </p>
+
         </div>
 
     </div>
@@ -639,7 +774,7 @@ footer{
 </section>
 
 
-<!-- NOTES DETAILS -->
+<!-- STUDY NOTES -->
 
 <section id="study-notes">
 
@@ -658,28 +793,57 @@ footer{
     <div class="card-container">
 
         <div class="card">
+
             <h3>📘 DSTL Notes</h3>
-            <p>Unit-wise DSTL study material.</p>
+
+            <p>
+                Unit-wise DSTL study material.
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>📊 DS Notes</h3>
-            <p>Data Structures concepts and algorithms.</p>
+
+            <p>
+                Data Structures concepts
+                and algorithms.
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>⚡ DE Notes</h3>
-            <p>Digital Electronics study material.</p>
+
+            <p>
+                Digital Electronics study
+                material and concepts.
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>🧠 UHV Notes</h3>
-            <p>Universal Human Values study material.</p>
+
+            <p>
+                Universal Human Values
+                study material.
+            </p>
+
         </div>
 
         <div class="card">
+
             <h3>💻 COA Notes</h3>
-            <p>Computer Organization and Architecture notes.</p>
+
+            <p>
+                Computer Organization and
+                Architecture notes.
+            </p>
+
         </div>
 
     </div>
@@ -687,104 +851,8 @@ footer{
 </section>
 
 
-<!-- SUGGESTION -->
+<!-- SUGGESTION BOX -->
 
-<section>
+<section class="suggestion-section">
 
-    <div class="section-logo">
-
-        <span class="section-icon">💡</span>
-
-        <span>SUGGESTION</span>
-
-    </div>
-
-    <div class="suggestion-box">
-
-        <label>Name:</label>
-
-        <input
-            type="text"
-            placeholder="Your Name"
-        >
-
-        <label>Email:</label>
-
-        <input
-            type="email"
-            placeholder="Your Email"
-        >
-
-        <label>Your Suggestion:</label>
-
-        <textarea
-            placeholder="Type your suggestion here..."
-        ></textarea>
-
-        <button type="button">
-            Send
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-    <div class="contact-icons">
-
-        <a
-            class="contact-item"
-            href="https://wa.me/919838736511"
-            target="_blank"
-        >
-
-            <div class="contact-icon">
-                🟢
-            </div>
-
-            <p>WhatsApp</p>
-
-        </a>
-
-
-        <a
-            class="contact-item"
-            href="tel:9838736511"
-        >
-
-            <div class="contact-icon">
-                📞
-            </div>
-
-            <p>Phone</p>
-
-        </a>
-
-
-        <a
-            class="contact-item"
-            href="mailto:"
-        >
-
-            <div class="contact-icon">
-                ✉️
-            </div>
-
-            <p>Email</p>
-
-        </a>
-
-    </div>
-
-    <p class="copyright">
-        © 2026-27 ANSH SINGH| All Rights Reserved
-    </p>
-
-</footer>
-
-</body>
-</html>
+    <div class="
