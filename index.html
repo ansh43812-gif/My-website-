@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -29,7 +30,7 @@ body{
     text-align:center;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     position:sticky;
@@ -44,7 +45,10 @@ header{
     font-size:28px;
     font-weight:bold;
     color:#08c8ff;
-    text-shadow:0 0 15px #00bfff;
+
+    text-shadow:
+        0 0 8px #00bfff,
+        0 0 20px #00bfff;
 }
 
 nav{
@@ -56,13 +60,14 @@ nav a{
     text-decoration:none;
     margin:0 8px;
     font-size:14px;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#00c8ff;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
     padding:70px 20px 55px;
@@ -71,6 +76,7 @@ nav a:hover{
 .hero h1{
     font-size:42px;
     color:#08c8ff;
+
     text-shadow:
         0 0 8px #00bfff,
         0 0 25px #00bfff;
@@ -82,14 +88,18 @@ nav a:hover{
     color:#e8f7ff;
 }
 
-/* PHOTO */
+/* ================= PROFILE PHOTO ================= */
 
 .profile-photo{
     width:300px;
     height:300px;
+
     object-fit:cover;
+
     border-radius:50%;
+
     margin-top:35px;
+
     border:6px solid #08c8ff;
 
     box-shadow:
@@ -98,7 +108,7 @@ nav a:hover{
         0 0 60px #008cff;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 section{
     padding:60px 20px;
@@ -106,17 +116,34 @@ section{
     margin:auto;
 }
 
-/* GLOWING LOGOS */
+.section-title{
+    font-size:35px;
+    color:#08c8ff;
+
+    text-shadow:
+        0 0 8px #00bfff,
+        0 0 25px #00bfff;
+
+    margin-bottom:18px;
+}
+
+.description{
+    font-size:17px;
+    margin-bottom:30px;
+    color:#f1f1f1;
+}
+
+/* ================= GLOWING SECTION LOGO ================= */
 
 .section-logo{
-
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
 
     gap:15px;
 
-    font-size:40px;
+    font-size:38px;
     font-weight:bold;
 
     color:#08c8ff;
@@ -139,42 +166,42 @@ section{
         0 0 25px rgba(0,200,255,0.5),
         inset 0 0 15px rgba(0,200,255,0.15);
 
-    animation:sectionGlow 2s infinite alternate;
+    animation:logoGlow 2s infinite alternate;
 }
 
 .section-icon{
     font-size:42px;
-    filter:drop-shadow(0 0 10px #00c8ff);
+
+    filter:
+        drop-shadow(0 0 8px #00c8ff);
 }
 
-@keyframes sectionGlow{
+@keyframes logoGlow{
 
     from{
+
         box-shadow:
             0 0 10px #00c8ff,
             0 0 20px rgba(0,200,255,0.4),
             inset 0 0 10px rgba(0,200,255,0.1);
+
     }
 
     to{
+
         box-shadow:
             0 0 20px #00c8ff,
             0 0 45px rgba(0,200,255,0.7),
             inset 0 0 20px rgba(0,200,255,0.2);
+
     }
 
 }
 
-.description{
-    font-size:17px;
-    margin-top:22px;
-    margin-bottom:30px;
-    color:#f1f1f1;
-}
-
-/* BUTTON */
+/* ================= BUTTON ================= */
 
 .btn{
+
     display:inline-block;
 
     background:#08bdf2;
@@ -199,23 +226,30 @@ section{
 }
 
 .btn:hover{
+
     transform:scale(1.05);
 
     box-shadow:
         0 0 15px #00c8ff,
         0 0 40px #00aeea;
+
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
 
 .card-container{
+
     display:grid;
+
     grid-template-columns:1fr;
+
     gap:22px;
+
     margin-top:30px;
 }
 
 .card{
+
     padding:28px 20px;
 
     border:1px solid #b9d9e8;
@@ -231,25 +265,60 @@ section{
 }
 
 .card:hover{
+
     transform:translateY(-5px);
 
     box-shadow:
         0 0 15px #00c8ff,
         0 0 30px rgba(0,190,255,0.3);
+
 }
 
 .card h3{
+
     font-size:24px;
+
     color:white;
+
     margin-bottom:12px;
 }
 
 .card p{
+
     color:#d7e7ef;
+
     line-height:1.6;
 }
 
-/* SUGGESTION BOX */
+/* ================= SUBJECT SPECIAL CARDS ================= */
+
+.subject-card{
+
+    border:2px solid #08c8ff;
+
+    box-shadow:
+        0 0 10px rgba(0,200,255,0.25);
+
+}
+
+.subject-card h3{
+
+    color:#08c8ff;
+
+    text-shadow:
+        0 0 8px #00bfff;
+}
+
+/* ================= SUGGESTION BOX ================= */
+
+.suggestion-section{
+
+    padding:60px 20px;
+
+    max-width:800px;
+
+    margin:auto;
+}
 
 .suggestion-box{
 
@@ -285,7 +354,7 @@ section{
 
     font-size:17px;
 
-    border-radius:6px;
+    border-radius:7px;
 
     border:1px solid #aaa;
 
@@ -295,9 +364,11 @@ section{
 .suggestion-box input:focus,
 .suggestion-box textarea:focus{
 
-    border-color:#08c8ff;
+    border:2px solid #00c8ff;
 
-    box-shadow:0 0 10px #00c8ff;
+    box-shadow:
+        0 0 10px rgba(0,200,255,0.5);
+
 }
 
 .suggestion-box textarea{
@@ -313,7 +384,7 @@ section{
 
     padding:15px 32px;
 
-    background:green;
+    background:#00a83b;
 
     color:white;
 
@@ -321,21 +392,48 @@ section{
 
     font-size:18px;
 
+    font-weight:bold;
+
     cursor:pointer;
 
-    border-radius:7px;
+    border-radius:8px;
+
+    box-shadow:
+        0 0 10px rgba(0,255,80,0.4);
 
     transition:0.3s;
 }
 
 .suggestion-box button:hover{
 
-    background:#00a000;
+    background:#00c94a;
 
     transform:scale(1.05);
 }
 
-/* FOOTER */
+.suggestion-box button:disabled{
+
+    background:#555;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+/* MESSAGE */
+
+#form-status{
+
+    margin-top:20px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    min-height:22px;
+}
+
+/* ================= FOOTER ================= */
 
 footer{
 
@@ -370,6 +468,15 @@ footer{
     color:white;
 
     text-decoration:none;
+
+    transition:0.3s;
+}
+
+.contact-item:hover{
+
+    color:#00c8ff;
+
+    transform:translateY(-4px);
 }
 
 .contact-icon{
@@ -391,7 +498,7 @@ footer{
     margin-top:15px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:500px){
 
@@ -399,47 +506,71 @@ footer{
         font-size:36px;
     }
 
+    .section-title{
+        font-size:32px;
+    }
+
     nav a{
         font-size:12px;
         margin:0 4px;
     }
 
+    .btn{
+        font-size:18px;
+        padding:16px 28px;
+    }
+
     .profile-photo{
+
         width:260px;
         height:260px;
+
     }
 
     .section-logo{
-        font-size:29px;
+
+        font-size:30px;
+
         padding:12px 20px;
-        gap:10px;
+
     }
 
     .section-icon{
-        font-size:32px;
+
+        font-size:34px;
+
     }
 
     .suggestion-box{
+
         padding:30px 15px;
+
     }
 
     .suggestion-box input,
     .suggestion-box textarea{
+
         width:90%;
+
     }
 
     .contact-icons{
+
         gap:25px;
+
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -464,7 +595,7 @@ footer{
 </header>
 
 
-<!-- HOME -->
+<!-- ================= HOME ================= -->
 
 <section class="hero" id="home">
 
@@ -476,7 +607,10 @@ footer{
         Your college resources in one place.
     </p>
 
-    <!-- YOUR PHOTO -->
+    <!--
+        PHOTO UPLOAD OPTION NAHI HAI.
+        photo.jpg ko index.html ke same folder mein rakho.
+    -->
 
     <img
         src="photo.jpg"
@@ -487,7 +621,7 @@ footer{
 </section>
 
 
-<!-- SYLLABUS -->
+<!-- ================= SYLLABUS ================= -->
 
 <section id="syllabus">
 
@@ -499,18 +633,24 @@ footer{
 
     </div>
 
-    <p class="description">
-        Check your current semester subjects and syllabus.
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
+        Check your current college subjects and syllabus.
     </p>
 
-    <a class="btn" href="#subjects">
-        📚 Get Syllabus
+    <a
+        class="btn"
+        href="#subjects"
+    >
+        📚 View Subjects
     </a>
 
 </section>
 
 
-<!-- TIMETABLE -->
+<!-- ================= TIMETABLE ================= -->
 
 <section id="timetable">
 
@@ -522,18 +662,24 @@ footer{
 
     </div>
 
-    <p class="description">
-        Check your college class timetable.
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
+        Check your weekly college class timetable.
     </p>
 
-    <a class="btn" href="#schedule">
-        🕐 Get Timetable
+    <a
+        class="btn"
+        href="#schedule"
+    >
+        📅 View Timetable
     </a>
 
 </section>
 
 
-<!-- NOTES -->
+<!-- ================= NOTES ================= -->
 
 <section id="notes">
 
@@ -545,18 +691,24 @@ footer{
 
     </div>
 
-    <p class="description">
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
         Access your subject notes and study material.
     </p>
 
-    <a class="btn" href="#study-notes">
-        📚 Get Notes
+    <a
+        class="btn"
+        href="#study-notes"
+    >
+        📚 View Notes
     </a>
 
 </section>
 
 
-<!-- LAB -->
+<!-- ================= MY LAB ================= -->
 
 <section id="lab">
 
@@ -568,15 +720,22 @@ footer{
 
     </div>
 
-    <p class="description">
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
         Lab details and practical work.
     </p>
 
+
     <div class="card-container">
+
 
         <div class="card">
 
-            <h3>🧪 DS Lab</h3>
+            <h3>
+                🧪 DS Lab
+            </h3>
 
             <p>
                 Data Structure and Data Science
@@ -585,9 +744,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>💻 Programming Lab</h3>
+            <h3>
+                💻 Programming Lab
+            </h3>
 
             <p>
                 C, C++ and Python programming
@@ -596,9 +758,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>🌐 Web Development Lab</h3>
+            <h3>
+                🌐 Web Development Lab
+            </h3>
 
             <p>
                 HTML, CSS and JavaScript
@@ -607,9 +772,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>📊 Data Science Lab</h3>
+            <h3>
+                📊 Data Science Lab
+            </h3>
 
             <p>
                 Data analysis, Python and
@@ -618,12 +786,13 @@ footer{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- SUBJECTS -->
+<!-- ================= SUBJECTS ================= -->
 
 <section id="subjects">
 
@@ -635,15 +804,22 @@ footer{
 
     </div>
 
-    <p class="description">
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
         Your current college subjects.
     </p>
 
+
     <div class="card-container">
 
-        <div class="card">
 
-            <h3>📘 DSTL</h3>
+        <div class="card subject-card">
+
+            <h3>
+                📘 DSTL
+            </h3>
 
             <p>
                 Discrete Structures and
@@ -652,20 +828,26 @@ footer{
 
         </div>
 
-        <div class="card">
 
-            <h3>📊 DS</h3>
+        <div class="card subject-card">
+
+            <h3>
+                📊 DS
+            </h3>
 
             <p>
                 Data Structures and
-                algorithms.
+                Algorithms.
             </p>
 
         </div>
 
-        <div class="card">
 
-            <h3>⚡ DE</h3>
+        <div class="card subject-card">
+
+            <h3>
+                ⚡ DE
+            </h3>
 
             <p>
                 Digital Electronics concepts
@@ -674,9 +856,12 @@ footer{
 
         </div>
 
-        <div class="card">
 
-            <h3>🧠 UHV</h3>
+        <div class="card subject-card">
+
+            <h3>
+                🧠 UHV
+            </h3>
 
             <p>
                 Universal Human Values and
@@ -685,9 +870,12 @@ footer{
 
         </div>
 
-        <div class="card">
 
-            <h3>💻 COA</h3>
+        <div class="card subject-card">
+
+            <h3>
+                💻 COA
+            </h3>
 
             <p>
                 Computer Organization and
@@ -696,32 +884,40 @@ footer{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- TIMETABLE DETAILS -->
+<!-- ================= TIMETABLE DETAILS ================= -->
 
 <section id="schedule">
 
     <div class="section-logo">
 
-        <span class="section-icon">🕐</span>
+        <span class="section-icon">🗓️</span>
 
         <span>CLASS TIMETABLE</span>
 
     </div>
 
-    <p class="description">
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
         Sample weekly timetable.
     </p>
 
+
     <div class="card-container">
+
 
         <div class="card">
 
-            <h3>Monday</h3>
+            <h3>
+                Monday
+            </h3>
 
             <p>
                 DSTL • DS • DE
@@ -729,9 +925,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>Tuesday</h3>
+            <h3>
+                Tuesday
+            </h3>
 
             <p>
                 UHV • COA • DS
@@ -739,9 +938,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>Wednesday</h3>
+            <h3>
+                Wednesday
+            </h3>
 
             <p>
                 DS Lab • DE • DSTL
@@ -749,9 +951,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>Thursday</h3>
+            <h3>
+                Thursday
+            </h3>
 
             <p>
                 COA • DS • UHV
@@ -759,9 +964,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>Friday</h3>
+            <h3>
+                Friday
+            </h3>
 
             <p>
                 Web Lab • COA • DE
@@ -769,32 +977,40 @@ footer{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- STUDY NOTES -->
+<!-- ================= STUDY NOTES ================= -->
 
 <section id="study-notes">
 
     <div class="section-logo">
 
-        <span class="section-icon">📖</span>
+        <span class="section-icon">📚</span>
 
         <span>STUDY NOTES</span>
 
     </div>
 
-    <p class="description">
+    <p
+        class="description"
+        style="margin-top:20px;"
+    >
         Important study resources.
     </p>
 
+
     <div class="card-container">
+
 
         <div class="card">
 
-            <h3>📘 DSTL Notes</h3>
+            <h3>
+                📘 DSTL Notes
+            </h3>
 
             <p>
                 Unit-wise DSTL study material.
@@ -802,9 +1018,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>📊 DS Notes</h3>
+            <h3>
+                📊 DS Notes
+            </h3>
 
             <p>
                 Data Structures concepts
@@ -813,9 +1032,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>⚡ DE Notes</h3>
+            <h3>
+                ⚡ DE Notes
+            </h3>
 
             <p>
                 Digital Electronics study
@@ -824,9 +1046,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>🧠 UHV Notes</h3>
+            <h3>
+                🧠 UHV Notes
+            </h3>
 
             <p>
                 Universal Human Values
@@ -835,9 +1060,12 @@ footer{
 
         </div>
 
+
         <div class="card">
 
-            <h3>💻 COA Notes</h3>
+            <h3>
+                💻 COA Notes
+            </h3>
 
             <p>
                 Computer Organization and
@@ -846,13 +1074,289 @@ footer{
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- SUGGESTION BOX -->
+<!-- ================= SUGGESTION BOX ================= -->
 
 <section class="suggestion-section">
 
-    <div class="
+    <div class="section-logo">
+
+        <span class="section-icon">💡</span>
+
+        <span>SUGGESTION BOX</span>
+
+    </div>
+
+
+    <div class="suggestion-box">
+
+        <form id="suggestion-form">
+
+
+            <label for="name">
+                Name:
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <label for="email">
+                Email:
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email"
+                required
+            >
+
+
+            <label for="message">
+                Your Suggestion:
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Type your suggestion here..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                id="send-button"
+            >
+                📤 Send Suggestion
+            </button>
+
+
+            <div id="form-status"></div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="contact-icons">
+
+
+        <!-- WHATSAPP -->
+
+        <a
+            class="contact-item"
+            href="https://wa.me/919838736511"
+            target="_blank"
+            rel="noopener"
+        >
+
+            <div class="contact-icon">
+                🟢
+            </div>
+
+            <p>
+                WhatsApp
+            </p>
+
+        </a>
+
+
+        <!-- PHONE -->
+
+        <a
+            class="contact-item"
+            href="tel:9838736511"
+        >
+
+            <div class="contact-icon">
+                📞
+            </div>
+
+            <p>
+                Phone
+            </p>
+
+        </a>
+
+
+        <!-- EMAIL -->
+
+        <a
+            class="contact-item"
+            href="mailto:anshsinghtha4455@gmail.com"
+        >
+
+            <div class="contact-icon">
+                ✉️
+            </div>
+
+            <p>
+                Email
+            </p>
+
+        </a>
+
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026-27 Hello Student |
+        All Rights Reserved
+
+    </p>
+
+</footer>
+
+
+<!-- ================= EMAILJS SCRIPT ================= -->
+
+<script>
+
+/*
+    EMAILJS CONFIGURATION
+
+    Service ID:
+    service_fthynhk
+
+    Template ID:
+    template_cezbhql
+
+    Public Key:
+    HP9eqAMiD1Ny10UWL
+*/
+
+
+emailjs.init({
+
+    publicKey: "HP9eqAMiD1Ny10UWL"
+
+});
+
+
+const suggestionForm =
+    document.getElementById("suggestion-form");
+
+const sendButton =
+    document.getElementById("send-button");
+
+const formStatus =
+    document.getElementById("form-status");
+
+
+suggestionForm.addEventListener(
+    "submit",
+    function(event){
+
+        event.preventDefault();
+
+
+        sendButton.disabled = true;
+
+        sendButton.innerText =
+            "⏳ Sending...";
+
+        formStatus.innerText =
+            "";
+
+
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const message =
+            document.getElementById("message").value;
+
+
+        emailjs.send(
+
+            "service_fthynhk",
+
+            "template_cezbhql",
+
+            {
+
+                name: name,
+
+                email: email,
+
+                message: message
+
+            }
+
+        )
+
+        .then(function(){
+
+            formStatus.innerText =
+                "✅ Suggestion sent successfully!";
+
+            formStatus.style.color =
+                "#00ff66";
+
+
+            suggestionForm.reset();
+
+
+            sendButton.disabled = false;
+
+            sendButton.innerText =
+                "📤 Send Suggestion";
+
+        })
+
+        .catch(function(error){
+
+            console.error(
+                "EmailJS Error:",
+                error
+            );
+
+
+            formStatus.innerText =
+                "❌ Message send nahi hua. Please try again.";
+
+            formStatus.style.color =
+                "#ff5252";
+
+
+            sendButton.disabled = false;
+
+            sendButton.innerText =
+                "📤 Send Suggestion";
+
+        });
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>
