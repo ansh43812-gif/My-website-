@@ -25,7 +25,9 @@ body{
     text-align:center;
 }
 
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
@@ -58,7 +60,9 @@ nav a:hover{
     color:#00c8ff;
 }
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     padding:70px 20px 55px;
@@ -78,23 +82,17 @@ nav a:hover{
     color:#e8f7ff;
 }
 
-/* ================= PROFILE PHOTO ================= */
-
-.photo-wrapper{
-    margin-top:35px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-}
+/* =========================
+   PROFILE PHOTO
+========================= */
 
 .profile-photo{
     width:300px;
     height:300px;
     object-fit:cover;
     border-radius:50%;
+    margin-top:35px;
     border:6px solid #08c8ff;
-
-    background:#071d32;
 
     box-shadow:
         0 0 15px #00c8ff,
@@ -102,42 +100,9 @@ nav a:hover{
         0 0 60px #008cff;
 }
 
-.photo-upload{
-    margin-top:20px;
-}
-
-.upload-label{
-    display:inline-block;
-    background:#08bdf2;
-    color:#001522;
-    padding:12px 22px;
-    border-radius:10px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-
-    box-shadow:
-        0 0 8px #00c8ff,
-        0 0 20px #00aeea;
-
-    transition:0.3s;
-}
-
-.upload-label:hover{
-    transform:scale(1.05);
-}
-
-#photoInput{
-    display:none;
-}
-
-.photo-info{
-    margin-top:10px;
-    font-size:13px;
-    color:#b9d9e8;
-}
-
-/* ================= SECTIONS ================= */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:60px 20px;
@@ -145,24 +110,72 @@ section{
     margin:auto;
 }
 
-.section-title{
-    font-size:35px;
+/* =========================
+   GLOWING SECTION LOGO
+========================= */
+
+.section-logo{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+
+    font-size:40px;
+    font-weight:bold;
     color:#08c8ff;
+    letter-spacing:2px;
+
+    padding:15px 30px;
+
+    border:2px solid #08c8ff;
+    border-radius:20px;
 
     text-shadow:
         0 0 8px #00bfff,
-        0 0 25px #00bfff;
+        0 0 20px #00bfff,
+        0 0 40px #008cff;
 
-    margin-bottom:18px;
+    box-shadow:
+        0 0 10px #00c8ff,
+        0 0 25px rgba(0,200,255,0.5),
+        inset 0 0 15px rgba(0,200,255,0.15);
+
+    animation:sectionGlow 2s infinite alternate;
+}
+
+.section-icon{
+    font-size:42px;
+    filter:drop-shadow(0 0 10px #00c8ff);
+}
+
+@keyframes sectionGlow{
+
+    from{
+        box-shadow:
+            0 0 10px #00c8ff,
+            0 0 20px rgba(0,200,255,0.4),
+            inset 0 0 10px rgba(0,200,255,0.1);
+    }
+
+    to{
+        box-shadow:
+            0 0 20px #00c8ff,
+            0 0 45px rgba(0,200,255,0.7),
+            inset 0 0 20px rgba(0,200,255,0.2);
+    }
+
 }
 
 .description{
     font-size:17px;
+    margin-top:22px;
     margin-bottom:30px;
     color:#f1f1f1;
 }
 
-/* ================= BUTTON ================= */
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
     display:inline-block;
@@ -171,11 +184,9 @@ section{
     color:#001522;
 
     padding:18px 35px;
-
     border-radius:12px;
 
     text-decoration:none;
-
     font-size:20px;
     font-weight:bold;
 
@@ -194,7 +205,9 @@ section{
         0 0 40px #00aeea;
 }
 
-/* ================= CARDS ================= */
+/* =========================
+   CARDS
+========================= */
 
 .card-container{
     display:grid;
@@ -207,7 +220,6 @@ section{
     padding:28px 20px;
 
     border:1px solid #b9d9e8;
-
     border-radius:15px;
 
     background:#071d32;
@@ -219,1150 +231,3 @@ section{
 }
 
 .card:hover{
-    transform:translateY(-5px);
-
-    box-shadow:
-        0 0 15px #00c8ff,
-        0 0 30px rgba(0,190,255,0.3);
-}
-
-.card h3{
-    font-size:24px;
-    color:white;
-    margin-bottom:12px;
-}
-
-.card p{
-    color:#d7e7ef;
-    line-height:1.6;
-}
-
-/* ================= MY LAB LOGO ================= */
-
-.lab-title{
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    font-size:42px;
-
-    font-weight:bold;
-
-    color:#08c8ff;
-
-    letter-spacing:3px;
-
-    padding:15px 30px;
-
-    border:2px solid #08c8ff;
-
-    border-radius:20px;
-
-    text-shadow:
-        0 0 8px #00bfff,
-        0 0 20px #00bfff,
-        0 0 40px #008cff;
-
-    box-shadow:
-        0 0 10px #00c8ff,
-        0 0 25px rgba(0,200,255,0.5),
-        inset 0 0 15px rgba(0,200,255,0.15);
-
-    animation:labGlow 2s infinite alternate;
-}
-
-.lab-icon{
-    font-size:45px;
-
-    filter:
-        drop-shadow(0 0 10px #00c8ff);
-}
-
-@keyframes labGlow{
-
-    from{
-
-        box-shadow:
-            0 0 10px #00c8ff,
-            0 0 20px rgba(0,200,255,0.4),
-            inset 0 0 10px rgba(0,200,255,0.1);
-
-    }
-
-    to{
-
-        box-shadow:
-            0 0 20px #00c8ff,
-            0 0 45px rgba(0,200,255,0.7),
-            inset 0 0 20px rgba(0,200,255,0.2);
-
-    }
-
-}
-
-/* ================= SUGGESTION BOX ================= */
-
-.suggestion-section{
-    padding:60px 20px;
-    max-width:800px;
-    margin:auto;
-}
-
-.suggestion-box{
-    max-width:570px;
-
-    margin:35px auto 0;
-
-    padding:35px 25px;
-
-    border-radius:20px;
-
-    background:#14294d;
-
-    box-shadow:
-        0 0 15px rgba(0,190,255,0.35);
-}
-
-.suggestion-box label{
-    display:block;
-
-    font-size:20px;
-
-    margin:15px 0 6px;
-}
-
-.suggestion-box input,
-.suggestion-box textarea{
-
-    width:85%;
-
-    padding:10px;
-
-    font-size:17px;
-
-    border-radius:6px;
-
-    border:1px solid #aaa;
-
-    outline:none;
-}
-
-.suggestion-box input:focus,
-.suggestion-box textarea:focus{
-
-    border-color:#08c8ff;
-
-    box-shadow:
-        0 0 10px #00c8ff;
-}
-
-.suggestion-box textarea{
-
-    height:110px;
-
-    resize:vertical;
-}
-
-.suggestion-box button{
-
-    margin-top:30px;
-
-    padding:15px 32px;
-
-    background:green;
-
-    color:white;
-
-    border:none;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    border-radius:5px;
-}
-
-.suggestion-box button:hover{
-
-    background:#00a000;
-}
-
-/* ================= CONTACT FOOTER ================= */
-
-footer{
-
-    margin-top:40px;
-
-    padding:35px 15px;
-
-    background:#041323;
-
-    color:white;
-
-    border-top:1px solid #073a5e;
-}
-
-.contact-icons{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    gap:35px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:30px;
-}
-
-.contact-item{
-
-    color:white;
-
-    text-decoration:none;
-}
-
-.contact-icon{
-
-    font-size:48px;
-}
-
-.contact-item p{
-
-    margin-top:5px;
-
-    font-size:17px;
-}
-
-.copyright{
-
-    font-size:18px;
-
-    margin-top:15px;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:500px){
-
-    .hero h1{
-        font-size:36px;
-    }
-
-    .section-title{
-        font-size:32px;
-    }
-
-    nav a{
-        font-size:12px;
-        margin:0 4px;
-    }
-
-    .btn{
-        font-size:18px;
-        padding:16px 28px;
-    }
-
-    .profile-photo{
-        width:260px;
-        height:260px;
-    }
-
-    .lab-title{
-        font-size:32px;
-        padding:12px 22px;
-    }
-
-    .lab-icon{
-        font-size:36px;
-    }
-
-    .suggestion-box{
-        padding:30px 15px;
-    }
-
-    .suggestion-box input,
-    .suggestion-box textarea{
-        width:90%;
-    }
-
-    .contact-icons{
-        gap:25px;
-    }
-
-}
-
-</style>
-</head>
-
-<body>
-
-
-<!-- ================= HEADER ================= -->
-
-<header>
-
-    <div class="logo">
-        HELLO STUDENT
-    </div>
-
-    <nav>
-
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#syllabus">
-            Syllabus
-        </a>
-
-        <a href="#timetable">
-            Timetable
-        </a>
-
-        <a href="#notes">
-            Notes
-        </a>
-
-        <a href="#lab">
-            Lab
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= HOME ================= -->
-
-<section
-    class="hero"
-    id="home"
->
-
-    <h1>
-        Welcome to Hello Student
-    </h1>
-
-    <p>
-        Your college resources in one place.
-    </p>
-
-
-    <!-- PHOTO -->
-
-    <div class="photo-wrapper">
-
-        <img
-            id="profilePhoto"
-            class="profile-photo"
-            alt="Student Photo"
-        >
-
-
-        <div class="photo-upload">
-
-            <label
-                for="photoInput"
-                class="upload-label"
-            >
-                📷 Upload Your Photo
-            </label>
-
-            <input
-                type="file"
-                id="photoInput"
-                accept="image/*"
-            >
-
-        </div>
-
-
-        <p class="photo-info">
-
-            Select your photo from
-            phone or laptop.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SYLLABUS ================= -->
-
-<section id="syllabus">
-
-    <h2 class="section-title">
-
-        Syllabus
-
-    </h2>
-
-    <p class="description">
-
-        Click below to open syllabus section.
-
-    </p>
-
-    <a
-        class="btn"
-        href="#subjects"
-    >
-
-        📘 Get Syllabus
-
-    </a>
-
-</section>
-
-
-<!-- ================= TIMETABLE ================= -->
-
-<section id="timetable">
-
-    <h2 class="section-title">
-
-        Timetable
-
-    </h2>
-
-    <p class="description">
-
-        Check your college class timetable.
-
-    </p>
-
-    <a
-        class="btn"
-        href="#schedule"
-    >
-
-        📅 Get Timetable
-
-    </a>
-
-</section>
-
-
-<!-- ================= NOTES ================= -->
-
-<section id="notes">
-
-    <h2 class="section-title">
-
-        Notes
-
-    </h2>
-
-    <p class="description">
-
-        Access your subject notes
-        and study material.
-
-    </p>
-
-    <a
-        class="btn"
-        href="#study-notes"
-    >
-
-        📒 Get Notes
-
-    </a>
-
-</section>
-
-
-<!-- ================= MY LAB ================= -->
-
-<section id="lab">
-
-    <div class="lab-title">
-
-        <span class="lab-icon">
-            🧪
-        </span>
-
-        <span>
-            MY LAB
-        </span>
-
-    </div>
-
-
-    <p
-        class="description"
-        style="margin-top:20px;"
-    >
-
-        Lab details and practical work.
-
-    </p>
-
-
-    <div class="card-container">
-
-
-        <div class="card">
-
-            <h3>
-                🧪 DS Lab
-            </h3>
-
-            <p>
-
-                Data Structure and Data Science
-                lab experiments and practical work.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                💻 Programming Lab
-            </h3>
-
-            <p>
-
-                C, C++ and Python programming
-                practicals and experiments.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🌐 Web Development Lab
-            </h3>
-
-            <p>
-
-                HTML, CSS and JavaScript
-                practical projects.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                📊 Data Science Lab
-            </h3>
-
-            <p>
-
-                Data analysis, Python and
-                visualization practicals.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SUBJECTS ================= -->
-
-<section id="subjects">
-
-    <h2 class="section-title">
-
-        Subjects
-
-    </h2>
-
-    <p class="description">
-
-        Your current college subjects.
-
-    </p>
-
-
-    <div class="card-container">
-
-
-        <!-- DSTL -->
-
-        <div class="card">
-
-            <h3>
-                📘 DSTL
-            </h3>
-
-            <p>
-
-                Discrete Structures and
-                Technical Logic.
-
-            </p>
-
-        </div>
-
-
-        <!-- DS -->
-
-        <div class="card">
-
-            <h3>
-                📊 DS
-            </h3>
-
-            <p>
-
-                Data Structures and
-                Algorithms.
-
-            </p>
-
-        </div>
-
-
-        <!-- DE -->
-
-        <div class="card">
-
-            <h3>
-                ⚡ DE
-            </h3>
-
-            <p>
-
-                Digital Electronics concepts
-                and practical topics.
-
-            </p>
-
-        </div>
-
-
-        <!-- UHV -->
-
-        <div class="card">
-
-            <h3>
-                🧠 UHV
-            </h3>
-
-            <p>
-
-                Universal Human Values and
-                professional ethics.
-
-            </p>
-
-        </div>
-
-
-        <!-- COA -->
-
-        <div class="card">
-
-            <h3>
-                💻 COA
-            </h3>
-
-            <p>
-
-                Computer Organization and
-                Architecture.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= TIMETABLE ================= -->
-
-<section id="schedule">
-
-    <h2 class="section-title">
-
-        Class Timetable
-
-    </h2>
-
-    <p class="description">
-
-        Sample weekly timetable.
-
-    </p>
-
-
-    <div class="card-container">
-
-
-        <div class="card">
-
-            <h3>
-                Monday
-            </h3>
-
-            <p>
-                DSTL • DS • DE
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Tuesday
-            </h3>
-
-            <p>
-                UHV • COA • DS
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Wednesday
-            </h3>
-
-            <p>
-                DS Lab • DE • DSTL
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Thursday
-            </h3>
-
-            <p>
-                COA • DS • UHV
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                Friday
-            </h3>
-
-            <p>
-                Web Lab • COA • DE
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STUDY NOTES ================= -->
-
-<section id="study-notes">
-
-    <h2 class="section-title">
-
-        Study Notes
-
-    </h2>
-
-    <p class="description">
-
-        Important study resources.
-
-    </p>
-
-
-    <div class="card-container">
-
-
-        <div class="card">
-
-            <h3>
-                📘 DSTL Notes
-            </h3>
-
-            <p>
-
-                Unit-wise DSTL
-                study material.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                📊 DS Notes
-            </h3>
-
-            <p>
-
-                Data Structures concepts
-                and algorithms.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                ⚡ DE Notes
-            </h3>
-
-            <p>
-
-                Digital Electronics
-                study material and concepts.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                🧠 UHV Notes
-            </h3>
-
-            <p>
-
-                Universal Human Values
-                study material.
-
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <h3>
-                💻 COA Notes
-            </h3>
-
-            <p>
-
-                Computer Organization and
-                Architecture notes.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SUGGESTION BOX ================= -->
-
-<section class="suggestion-section">
-
-    <h2 class="section-title">
-
-        Suggestion Box
-
-    </h2>
-
-
-    <div class="suggestion-box">
-
-
-        <label>
-            Name:
-        </label>
-
-        <input
-            type="text"
-            id="suggestionName"
-            placeholder="Your Name"
-        >
-
-
-        <label>
-            Email:
-        </label>
-
-        <input
-            type="email"
-            id="suggestionEmail"
-            placeholder="Your Email"
-        >
-
-
-        <label>
-            Your Suggestion:
-        </label>
-
-        <textarea
-            id="suggestionText"
-            placeholder="Type your suggestion here..."
-        ></textarea>
-
-
-        <button
-            type="button"
-            onclick="sendSuggestion()"
-        >
-
-            Send
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="contact-icons">
-
-
-        <!-- WHATSAPP -->
-
-        <a
-            class="contact-item"
-            href="https://wa.me/919838736511"
-            target="_blank"
-        >
-
-            <div class="contact-icon">
-                🟢
-            </div>
-
-            <p>
-                WhatsApp
-            </p>
-
-        </a>
-
-
-        <!-- PHONE -->
-
-        <a
-            class="contact-item"
-            href="tel:9838736511"
-        >
-
-            <div class="contact-icon">
-                📞
-            </div>
-
-            <p>
-                Phone
-            </p>
-
-        </a>
-
-
-        <!-- EMAIL -->
-
-        <a
-            class="contact-item"
-            href="mailto:"
-        >
-
-            <div class="contact-icon">
-                ✉️
-            </div>
-
-            <p>
-                Email
-            </p>
-
-        </a>
-
-    </div>
-
-
-    <p class="copyright">
-
-        © 2026-27 Hello Student |
-        All Rights Reserved
-
-    </p>
-
-</footer>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-
-/* ================= PHOTO UPLOAD ================= */
-
-const photoInput =
-    document.getElementById("photoInput");
-
-const profilePhoto =
-    document.getElementById("profilePhoto");
-
-
-/* Saved photo load */
-
-const savedPhoto =
-    localStorage.getItem("studentPhoto");
-
-
-if(savedPhoto){
-
-    profilePhoto.src = savedPhoto;
-
-}
-
-
-/* Photo select */
-
-photoInput.addEventListener(
-    "change",
-    function(){
-
-        const file =
-            this.files[0];
-
-
-        if(!file){
-
-            return;
-
-        }
-
-
-        if(!file.type.startsWith("image/")){
-
-            alert(
-                "Please select an image file."
-            );
-
-            return;
-
-        }
-
-
-        const reader =
-            new FileReader();
-
-
-        reader.onload =
-            function(event){
-
-                profilePhoto.src =
-                    event.target.result;
-
-
-                localStorage.setItem(
-                    "studentPhoto",
-                    event.target.result
-                );
-
-            };
-
-
-        reader.readAsDataURL(file);
-
-    }
-);
-
-
-/* ================= SUGGESTION ================= */
-
-function sendSuggestion(){
-
-    const name =
-        document
-        .getElementById("suggestionName")
-        .value
-        .trim();
-
-
-    const email =
-        document
-        .getElementById("suggestionEmail")
-        .value
-        .trim();
-
-
-    const suggestion =
-        document
-        .getElementById("suggestionText")
-        .value
-        .trim();
-
-
-    if(
-        name === "" ||
-        email === "" ||
-        suggestion === ""
-    ){
-
-        alert(
-            "Please fill all the fields."
-        );
-
-        return;
-
-    }
-
-
-    alert(
-        "Thank you " +
-        name +
-        "! Your suggestion has been received."
-    );
-
-
-    document
-        .getElementById("suggestionName")
-        .value = "";
-
-
-    document
-        .getElementById("suggestionEmail")
-        .value = "";
-
-
-    document
-        .getElementById("suggestionText")
-        .value = "";
-
-}
-
-</script>
-
-
-</body>
-</html>
